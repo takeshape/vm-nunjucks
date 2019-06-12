@@ -1,7 +1,13 @@
 {
   "name": "vm-nunjucks",
   "version": "0.1.1",
+  "author": "Andrew Sprouse <andrew@takeshape.io>",
   "description": "Nunjucks sandboxed with vm2",
+  "homepage": "https://github.com/takeshape/vm-nunjucks",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/takeshape/vm-nunjucks.git"
+  },
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -13,7 +19,6 @@
     "build": "webpack --config webpack.config.js &&  node ./wrap-with-vm2.js",
     "prepublishOnly": "npm test && npm run clean && npm run build && npm run test-lib"
   },
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "jest": "^24.8.0",
