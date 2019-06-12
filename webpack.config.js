@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/nunjucks.js',
   output: {
     libraryTarget: 'commonjs2',
     path: path.join(__dirname, 'lib'),

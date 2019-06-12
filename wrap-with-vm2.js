@@ -2,23 +2,15 @@
 const path = require('path');
 const fs = require('fs');
 
-const filePath = path.join(__dirname, 'lib/index.js');
-const source = fs.readFileSync(filePath, 'utf8');
-
 function template(source) {
     const escaped = JSON.stringify(source);
-    return `const {NodeVM} = require('vm2');
-const vm = new NodeVM({
-  console: 'inherit',
-  sandbox: {},
-  require: {
-      builtin: ['fs', 'path', 'events'],
-      context: 'sandbox'
-  }    
-});
-
-module.exports = vm.run(${escaped}, 'vm-nunjucks.js');
-`;
+    return `module.exports = require('./vm')(${escaped}, 'vm-nunjucks.js');`;
 }
 
-fs.writeFileSync(filePath, template(source), {encoding: 'utf8'});
+// copy src/vm.js to lib/vm.js
+fs.createReadStream(path.join(__dirname, 'src/vm.js')).pipe(fs.createWriteStream(path.join(__dirname, 'lib/vm.js')));
+
+// wrap webpacked nunjucks with vm
+const indexPath = path.join(__dirname, 'lib/index.js');
+const source = fs.readFileSync(indexPath, 'utf8');
+fs.writeFileSync(indexPath, template(source), {encoding: 'utf8'});

@@ -7,19 +7,23 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest ./test.js",
+    "clean": "rimraf lib/*.js",
+    "test": "jest src --coverage=true --collectCoverageFrom=src/**/*.js --coveragePathIgnorePatterns=.*/__tests__/.*",
+    "test-lib": "jest lib --coverage=true --collectCoverageFrom=lib/**/*.js --coveragePathIgnorePatterns=.*/__tests__/.*",
     "build": "webpack --config webpack.config.js &&  node ./wrap-with-vm2.js",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm test && npm run clean && npm run build && npm run test-lib"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "jest": "^24.8.0",
     "nunjucks": "^3.2.0",
+    "rimraf": "^2.6.3",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.4"
   },
   "dependencies": {
     "vm2": "^3.8.1"
-  }
+  },
+  "sideEffects": false
 }
