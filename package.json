@@ -1,0 +1,24 @@
+{
+  "name": "vm-nunjucks",
+  "version": "0.1.0",
+  "description": "Nunjucks sandboxed with vm2",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "node ./test.js",
+    "build": "webpack --config webpack.config.js &&  node ./wrap-with-vm2.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "nunjucks": "^3.2.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.4"
+  },
+  "dependencies": {
+    "vm2": "^3.8.1"
+  }
+}
