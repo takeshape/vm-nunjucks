@@ -5,8 +5,8 @@
   "description": "Nunjucks sandboxed with vm2",
   "homepage": "https://github.com/takeshape/vm-nunjucks",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/takeshape/vm-nunjucks.git"
+    "type": "git",
+    "url": "https://github.com/takeshape/vm-nunjucks.git"
   },
   "main": "lib/index.js",
   "files": [
@@ -21,6 +21,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "events": "^3.0.0",
     "jest": "^24.8.0",
     "nunjucks": "^3.2.0",
     "rimraf": "^2.6.3",
