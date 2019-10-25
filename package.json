@@ -29,7 +29,7 @@
     "webpack-cli": "^3.3.4"
   },
   "dependencies": {
-    "vm2": "^3.8.1"
+    "vm2": "^3.8.4"
   },
   "sideEffects": false
 }
