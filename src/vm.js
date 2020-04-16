@@ -1,4 +1,4 @@
-const {NodeVM} = require('vm2');
+const {NodeVM} = require('@takeshape/vm2');
 const vm = new NodeVM({
   console: 'inherit',
   sandbox: {},
