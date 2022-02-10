@@ -1,6 +1,6 @@
 {
   "name": "@takeshape/vm-nunjucks",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Andrew Sprouse <andrew@takeshape.io>",
   "description": "Nunjucks sandboxed with vm2",
   "homepage": "https://github.com/takeshape/vm-nunjucks",
