@@ -29,7 +29,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
-    "@takeshape/vm2": "^3.9.1"
+    "@takeshape/vm2": "^3.9.5"
   },
   "sideEffects": false
 }

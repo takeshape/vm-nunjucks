@@ -564,10 +564,10 @@
   dependencies:
     type-detect "4.0.8"
 
-"@takeshape/vm2@^3.9.1":
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/@takeshape/vm2/-/vm2-3.9.1.tgz#b403029e416f5629b98d059d20e20949da9c3cae"
-  integrity sha512-jgCkLVfyr0Wfp09lnVnXqk8YEQwQTKgR+m8Q/nTYbN1CZqGoWam1rAjCOtmeuxMfgO2FpX7MrH0cM1ZVT1qYrg==
+"@takeshape/vm2@^3.9.5":
+  version "3.9.5"
+  resolved "https://registry.yarnpkg.com/@takeshape/vm2/-/vm2-3.9.5.tgz#8fd4b5944c9779427110313e024d6e891e921c88"
+  integrity sha512-5iOaNigjNS4IDEFvt4Go8JpP7HPVHDwxVi7vxdbALezXmgkwt257fNl1ad3WdXZi/M/4txGE1funVSA6vtb/ng==
 
 "@types/babel__core@^7.1.7":
   version "7.1.7"
